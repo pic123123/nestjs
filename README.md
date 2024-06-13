@@ -1,73 +1,21 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Nestjs ?
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+NestJS는 Node.js 환경에서 server-side application 을 구축하기 위한 FrameWork로, Express를 default HTTP server FrameWork로 사용합니다. NestJS는 JavaScript를 사용하며, TypeScript를 완벽하게 지원하여 더 안전하고 유지보수 가능한 코드를 작성할 수 있도록 도와줍니다.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Express와 달리, NestJS는 구조화된 architecture를 제공하여 팀 단위로 일관성 있는 코드 작성이 가능하도록 돕습니다. 이는 Angular에서 영감을 받아 modules, decorator, 의존성 주입(DI;Dependency Injection) 등의 개념을 도입한 덕분입니다.
 
-## Description
+NestJS의 주요 특징으로는 다음과 같습니다:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- 모듈화: 기능 단위로 모듈을 분리하여 재사용성과 관리 용이성을 높입니다.
+  데코레이터: 클래스와 메소드 위에 데코레이터를 사용하여 메타데이터를 추가하고, 이를 통해 라우팅, 미들웨어 등을 간편하게 설정할 수 있습니다.
 
-## Installation
+- 의존성 주입: DI 컨테이너를 통해 객체 간의 의존성을 자동으로 관리하여 테스트 용이성과 코드의 유연성을 향상시킵니다.
 
-```bash
-$ npm install
-```
+- 미들웨어와 가드: 요청의 흐름을 제어하거나 특정 조건에서만 접근을 허용하는 등의 로직을 쉽게 구현할 수 있습니다.
+  이러한 특징 덕분에 NestJS는 대규모 애플리케이션에서도 유지보수가 쉽고 확장 가능한 코드를 작성하는 데 유리합니다.
 
-## Running the app
+## Controllers & Routing
 
-```bash
-# development
-$ npm run start
+- 컨트롤러는 들어오는 요청을 처리 하고 클라이언트에 응답을 반환하는 일을 담당합니다 .
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- 라우팅은 @Controller() decorator를 사용합니다.
